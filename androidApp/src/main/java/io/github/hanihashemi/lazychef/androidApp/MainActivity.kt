@@ -1,20 +1,24 @@
 package io.github.hanihashemi.lazychef.androidApp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import io.github.hanihashemi.lazychef.shared.Greeting
-import android.widget.TextView
-
-fun greet(): String {
-    return Greeting().greeting()
-}
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.platform.setContent
 
 class MainActivity : AppCompatActivity() {
+    private val navigationViewModel by viewModels<NavigationViewModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val tv: TextView = findViewById(R.id.text_view)
-        tv.text = greet()
+        setContent {
+            LazyChefApp(navigationViewModel)
+        }
+    }
+
+    override fun onBackPressed() {
+        if (!navigationViewModel.onBack()) {
+            super.onBackPressed()
+        }
     }
 }
