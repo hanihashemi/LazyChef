@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="Theme.LazyChef" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#ff00ff</item>
+        <item name="colorPrimaryDark">#ff00ff</item>
+        <item name="colorAccent">#ff00ff</item>
+        <item name="android:statusBarColor">#ff00ff</item>
+    </style>
+</resources>
