@@ -9,12 +9,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.state
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawShadow
-import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
@@ -24,11 +22,11 @@ import io.github.hanihashemi.lazychef.androidApp.ui.ThemedPreview
 
 @Composable
 fun HomeScreen(navigateTo: (Screen) -> Unit) {
-    HomeScreen()
+    HomeScreen2 { navigateTo(Screen.Recipe("2")) }
 }
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen2(asd: () -> Unit) {
     Scaffold(
 //        topBar = {
 //            val title = stringResource(id = R.string.app_name)
@@ -42,17 +40,17 @@ fun HomeScreen() {
 //            )
 //        },
         bodyContent = { innerPadding ->
-            bodyContent()
+            bodyContent(asd)
         }
     )
 }
 
 @Composable
-fun bodyContent(){
+fun bodyContent(asd: () -> Unit) {
     Column(modifier = Modifier.padding(16.dp)){
         title()
         subTitle()
-        dishCard()
+        dishCard(asd)
     }
 }
 
@@ -66,12 +64,12 @@ fun subTitle() {
     Text(text = "Be healthy and lazy", style = MaterialTheme.typography.subtitle1)
 }
 
-@Composable()
-fun dishCard() {
+@Composable
+fun dishCard(asd: () -> Unit) {
     Row(
         modifier = Modifier
-            .drawShadow(3.dp, shape = RoundedCornerShape(10.dp))
-            .clickable {}
+            .drawShadow(2.dp, shape = MaterialTheme.shapes.medium)
+            .clickable {asd()}
             .padding(16.dp)
             .fillMaxWidth()
     ) {
@@ -94,6 +92,6 @@ fun dishCard() {
 @Composable
 fun PreviewHomeScreenBody() {
     ThemedPreview {
-        HomeScreen()
+        HomeScreen2({})
     }
 }
