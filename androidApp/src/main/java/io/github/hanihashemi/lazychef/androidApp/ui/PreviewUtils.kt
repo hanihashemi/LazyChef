@@ -1,5 +1,6 @@
 package io.github.hanihashemi.lazychef.androidApp.ui
 
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 
@@ -9,7 +10,7 @@ internal fun ThemedPreview(
     children: @Composable () -> Unit
 ) {
     LazyChefTheme(darkTheme = darkTheme) {
-        Surface {
+        Surface(color = MaterialTheme.colors.background) {
             children()
         }
     }
