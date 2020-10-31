@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "92510198088",
+    "firebase_url": "https://lazychef-5a875.firebaseio.com",
+    "project_id": "lazychef-5a875",
+    "storage_bucket": "lazychef-5a875.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92510198088:android:6a89c2d1bafb6908847b7d",
+        "android_client_info": {
+          "package_name": "io.github.hanihashemi.lazychef.androidApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92510198088-ki4i6q45g98giu09td86pfe7srktqt3u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.hanihashemi.lazychef.androidApp",
+            "certificate_hash": "82d45dff2e22ca76cf27a845b79dfb1e81a6d4aa"
+          }
+        },
+        {
+          "client_id": "92510198088-c6umbsoq2e2ifp973ro20rsn1as07187.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq7n5NQl8gEMPfhmnofF8DzwhDM4-Xxu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92510198088-c6umbsoq2e2ifp973ro20rsn1as07187.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

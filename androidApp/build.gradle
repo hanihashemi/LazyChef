@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -76,4 +77,8 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
     // Integration with observables
     implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+    implementation ("com.google.firebase:firebase-analytics-ktx")
 }
