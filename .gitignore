@@ -7,3 +7,6 @@
 /captures
 .externalNativeBuild
 .cxx
+androidApp/build
+shared/build
+*.hprof
