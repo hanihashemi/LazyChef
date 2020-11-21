@@ -20,3 +20,10 @@ jobs:
         java-version: 1.8
     - name: Build with Gradle
       run: ./gradlew assembleDebug --stacktrace
+    - name: Ktlint
+      uses: ScaCap/action-ktlint@1.3
+      with:
+        github_token: ${{ secrets.github_token }}
+        android: true
+        level: warning
+        fail_on_error: false
