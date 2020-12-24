@@ -20,3 +20,5 @@ jobs:
         java-version: 1.8
     - name: Build with Gradle
       run: ./gradlew assembleDebug lint
+    - name: Ktlint
+      run: curl -sSLO https://github.com/pinterest/ktlint/releases/download/0.40.0/ktlint && chmod a+x ktlint && sudo mv ktlint /usr/local/bin/ && ktlint
