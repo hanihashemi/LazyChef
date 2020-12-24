@@ -39,6 +39,12 @@ android {
         kotlinCompilerExtensionVersion "1.0.0-alpha04"
         kotlinCompilerVersion '1.4.10'
     }
+    lintOptions {
+//        htmlReport true
+//        htmlOutput file("lint-report.html")
+        warningsAsErrors true
+        abortOnError true
+    }
 }
 
 group = "io.github.hanihashemi.lazychef"
