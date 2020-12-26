@@ -76,7 +76,7 @@ fun bodyContent() {
         Text(
             style = MaterialTheme.typography.body2,
             text =
-                """
+            """
             |2 cups of shit
             |2 cups of shit
             |2 cups of shit
@@ -87,7 +87,7 @@ fun bodyContent() {
         Text(
             style = MaterialTheme.typography.body2,
             text =
-                """
+            """
             |2 cups of shit
             |2 cups of shit
             |2 cups of shit
