@@ -3,7 +3,13 @@ package io.github.hanihashemi.lazychef.androidApp.ui.home
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.layout.preferredWidth
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
@@ -39,7 +45,7 @@ fun HomeScreen2(asd: () -> Unit) {
 //                }
 //            )
 //        },
-        bodyContent = { innerPadding ->
+        bodyContent = {
             bodyContent(asd)
         }
     )
@@ -47,7 +53,7 @@ fun HomeScreen2(asd: () -> Unit) {
 
 @Composable
 fun bodyContent(asd: () -> Unit) {
-    Column(modifier = Modifier.padding(16.dp)){
+    Column(modifier = Modifier.padding(16.dp)) {
         title()
         subTitle()
         dishCard(asd)
@@ -69,7 +75,7 @@ fun dishCard(asd: () -> Unit) {
     Row(
         modifier = Modifier
             .drawShadow(2.dp, shape = MaterialTheme.shapes.medium)
-            .clickable {asd()}
+            .clickable { asd() }
             .padding(16.dp)
             .fillMaxWidth()
     ) {
@@ -92,6 +98,6 @@ fun dishCard(asd: () -> Unit) {
 @Composable
 fun PreviewHomeScreenBody() {
     ThemedPreview {
-        HomeScreen2({})
+        HomeScreen2 {}
     }
 }

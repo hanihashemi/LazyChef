@@ -1,6 +1,5 @@
 package io.github.hanihashemi.lazychef.shared
 
-
 import platform.UIKit.UIDevice
 
 actual class Platform actual constructor() {

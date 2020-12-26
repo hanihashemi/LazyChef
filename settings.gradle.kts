@@ -15,7 +15,5 @@ pluginManagement {
 }
 rootProject.name = "LazyChef"
 
-
 include(":androidApp")
 include(":shared")
-
