@@ -12,10 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Setup Ruby
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: '2.6'
     - name: Checkout
       uses: actions/checkout@v2
     - name: Setup JDK 1.8
