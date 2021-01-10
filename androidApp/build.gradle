@@ -87,6 +87,8 @@ dependencies {
     // Integration with observables
     implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
 
+    implementation "androidx.navigation:navigation-compose:1.0.0-alpha04"
+
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:26.0.0')
     implementation ("com.google.firebase:firebase-analytics-ktx:18.0.0")

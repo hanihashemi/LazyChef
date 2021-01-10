@@ -21,14 +21,18 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.navigate
 import androidx.ui.tooling.preview.Preview
 import io.github.hanihashemi.lazychef.androidApp.R
-import io.github.hanihashemi.lazychef.androidApp.Screen
+import io.github.hanihashemi.lazychef.androidApp.Screens
 import io.github.hanihashemi.lazychef.androidApp.ui.ThemedPreview
 
 @Composable
-fun HomeScreen(navigateTo: (Screen) -> Unit) {
-    HomeScreen2 { navigateTo(Screen.Recipe("2")) }
+fun HomeScreen(navController: NavHostController) {
+    HomeScreen2 {
+        navController.navigate(Screens.RECIPE.name)
+    }
 }
 
 @Composable

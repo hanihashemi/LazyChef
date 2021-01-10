@@ -27,12 +27,6 @@ import androidx.ui.tooling.preview.Preview
 import io.github.hanihashemi.lazychef.androidApp.R
 import io.github.hanihashemi.lazychef.androidApp.ui.ThemedPreview
 
-@Suppress("UNUSED_PARAMETER")
-@Composable
-fun RecipeScreen(id: String, onBack: () -> Unit) {
-    RecipeScreen()
-}
-
 @Composable
 fun RecipeScreen() {
     Scaffold(
