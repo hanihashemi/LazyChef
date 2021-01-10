@@ -50,32 +50,32 @@ fun HomeScreen2(asd: () -> Unit) {
 //            )
 //        },
         bodyContent = {
-            bodyContent(asd)
+            BodyContent(asd)
         }
     )
 }
 
 @Composable
-fun bodyContent(asd: () -> Unit) {
+fun BodyContent(asd: () -> Unit) {
     Column(modifier = Modifier.padding(16.dp)) {
-        title()
-        subTitle()
-        dishCard(asd)
+        Title()
+        SubTitle()
+        DishCard(asd)
     }
 }
 
 @Composable
-fun title() {
+fun Title() {
     Text(text = "Lazy Chef", style = MaterialTheme.typography.h5)
 }
 
 @Composable
-fun subTitle() {
+fun SubTitle() {
     Text(text = "Be healthy and lazy", style = MaterialTheme.typography.subtitle1)
 }
 
 @Composable
-fun dishCard(asd: () -> Unit) {
+fun DishCard(asd: () -> Unit) {
     Row(
         modifier = Modifier
             .shadow(2.dp, shape = MaterialTheme.shapes.medium)

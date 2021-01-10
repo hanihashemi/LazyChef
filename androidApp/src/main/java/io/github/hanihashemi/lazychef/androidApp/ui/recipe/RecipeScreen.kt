@@ -50,14 +50,14 @@ fun RecipeScreen() {
 @Composable
 fun bodyContent() {
     Column(modifier = Modifier.padding(16.dp)) {
-        topper()
+        Topper()
         Spacer(modifier = Modifier.size(32.dp))
         Row(modifier = Modifier.fillMaxWidth().align(Alignment.End)) {
             Column {
-                title("Nutritions")
-                nutritionItem()
-                nutritionItem()
-                nutritionItem()
+                Title("Nutritions")
+                NutritionItem()
+                NutritionItem()
+                NutritionItem()
             }
             Image(
                 bitmap = imageResource(id = R.drawable.dish),
@@ -66,7 +66,7 @@ fun bodyContent() {
                     .clip(RoundedCornerShape(20.dp))
             )
         }
-        title("Ingredients")
+        Title("Ingredients")
         Text(
             style = MaterialTheme.typography.body2,
             text =
@@ -77,7 +77,7 @@ fun bodyContent() {
             |2 cups of shit
         """.trimMargin()
         )
-        title("Receipe Preparation")
+        Title("Receipe Preparation")
         Text(
             style = MaterialTheme.typography.body2,
             text =
@@ -92,7 +92,7 @@ fun bodyContent() {
 }
 
 @Composable
-fun topper() {
+fun Topper() {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(text = "Watercress Salad", style = MaterialTheme.typography.h1)
         Text(
@@ -103,7 +103,7 @@ fun topper() {
 }
 
 @Composable
-fun nutritionItem() {
+fun NutritionItem() {
     Row(
         modifier = Modifier
             .padding(vertical = 8.dp)
@@ -135,7 +135,7 @@ fun nutritionItem() {
 }
 
 @Composable
-fun title(title: String) {
+fun Title(title: String) {
     Text(title, style = MaterialTheme.typography.h2, modifier = Modifier.padding(vertical = 8.dp))
 }
 
