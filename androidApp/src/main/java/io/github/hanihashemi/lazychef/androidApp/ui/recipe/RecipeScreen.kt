@@ -18,7 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawShadow
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.style.TextAlign
@@ -66,9 +66,9 @@ fun bodyContent() {
                 nutritionItem()
             }
             Image(
-                asset = imageResource(id = R.drawable.dish),
+                bitmap = imageResource(id = R.drawable.dish),
                 modifier = Modifier.preferredSize(200.dp)
-                    .drawShadow(8.dp, shape = CircleShape)
+                    .shadow(8.dp, shape = CircleShape)
                     .clip(RoundedCornerShape(20.dp))
             )
         }
@@ -113,13 +113,13 @@ fun nutritionItem() {
     Row(
         modifier = Modifier
             .padding(vertical = 8.dp)
-            .drawShadow(15.dp, shape = CircleShape)
+            .shadow(15.dp, shape = CircleShape)
             .background(MaterialTheme.colors.background)
             .padding(vertical = 8.dp, horizontal = 12.dp)
     ) {
         Column(
             modifier = Modifier
-                .drawShadow(2.dp, shape = CircleShape)
+                .shadow(2.dp, shape = CircleShape)
                 .background(Color.White)
                 .align(Alignment.CenterVertically)
         ) {

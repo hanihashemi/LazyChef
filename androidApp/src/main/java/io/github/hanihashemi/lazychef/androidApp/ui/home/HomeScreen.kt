@@ -18,7 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawShadow
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
@@ -74,15 +74,15 @@ fun subTitle() {
 fun dishCard(asd: () -> Unit) {
     Row(
         modifier = Modifier
-            .drawShadow(2.dp, shape = MaterialTheme.shapes.medium)
+            .shadow(2.dp, shape = MaterialTheme.shapes.medium)
             .clickable { asd() }
             .padding(16.dp)
             .fillMaxWidth()
     ) {
         Image(
-            asset = imageResource(id = R.drawable.dish),
+            bitmap = imageResource(id = R.drawable.dish),
             modifier = Modifier.preferredSize(80.dp)
-                .drawShadow(8.dp, shape = CircleShape)
+                .shadow(8.dp, shape = CircleShape)
                 .clip(RoundedCornerShape(20.dp))
         )
         Spacer(modifier = Modifier.preferredWidth(8.dp))
