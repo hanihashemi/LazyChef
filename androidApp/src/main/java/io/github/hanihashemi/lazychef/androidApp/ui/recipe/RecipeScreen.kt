@@ -1,7 +1,6 @@
 package io.github.hanihashemi.lazychef.androidApp.ui.recipe
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -14,6 +13,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -42,13 +42,13 @@ fun RecipeScreen() {
 //            )
 //        },
         bodyContent = {
-            bodyContent()
+            BodyContent()
         }
     )
 }
 
 @Composable
-fun bodyContent() {
+fun BodyContent() {
     Column(modifier = Modifier.padding(16.dp)) {
         Topper()
         Spacer(modifier = Modifier.size(32.dp))
@@ -60,7 +60,7 @@ fun bodyContent() {
                 NutritionItem()
             }
             Image(
-                bitmap = imageResource(id = R.drawable.dish),
+                bitmap = imageResource(id = R.drawable.common_full_open_on_phone),
                 modifier = Modifier.preferredSize(200.dp)
                     .shadow(8.dp, shape = CircleShape)
                     .clip(RoundedCornerShape(20.dp))
@@ -70,7 +70,7 @@ fun bodyContent() {
         Text(
             style = MaterialTheme.typography.body2,
             text =
-            """
+                """
             |2 cups of shit
             |2 cups of shit
             |2 cups of shit
@@ -81,7 +81,7 @@ fun bodyContent() {
         Text(
             style = MaterialTheme.typography.body2,
             text =
-            """
+                """
             |2 cups of shit
             |2 cups of shit
             |2 cups of shit

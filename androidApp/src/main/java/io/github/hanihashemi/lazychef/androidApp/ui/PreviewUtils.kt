@@ -7,11 +7,11 @@ import androidx.compose.runtime.Composable
 @Composable
 internal fun ThemedPreview(
     darkTheme: Boolean = false,
-    children: @Composable () -> Unit
+    content: @Composable () -> Unit
 ) {
     LazyChefTheme(darkTheme = darkTheme) {
         Surface(color = MaterialTheme.colors.background) {
-            children()
+            content()
         }
     }
 }

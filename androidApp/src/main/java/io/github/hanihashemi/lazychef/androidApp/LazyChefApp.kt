@@ -8,7 +8,10 @@ import io.github.hanihashemi.lazychef.androidApp.ui.LazyChefTheme
 import io.github.hanihashemi.lazychef.androidApp.ui.home.HomeScreen
 import io.github.hanihashemi.lazychef.androidApp.ui.recipe.RecipeScreen
 
-enum class Screens { HOME, RECIPE }
+enum class Screens {
+
+    HOME, RECIPE
+}
 
 @Composable
 fun LazyChefApp() {
