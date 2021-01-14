@@ -1,7 +1,6 @@
 package io.github.hanihashemi.lazychef.androidApp.ui.recipe
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -14,11 +13,12 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawShadow
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.style.TextAlign
@@ -26,12 +26,6 @@ import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
 import io.github.hanihashemi.lazychef.androidApp.R
 import io.github.hanihashemi.lazychef.androidApp.ui.ThemedPreview
-
-@Suppress("UNUSED_PARAMETER")
-@Composable
-fun RecipeScreen(id: String, onBack: () -> Unit) {
-    RecipeScreen()
-}
 
 @Composable
 fun RecipeScreen() {
@@ -48,57 +42,53 @@ fun RecipeScreen() {
 //            )
 //        },
         bodyContent = {
-            bodyContent()
+            BodyContent()
         }
     )
 }
 
 @Composable
-fun bodyContent() {
+fun BodyContent() {
     Column(modifier = Modifier.padding(16.dp)) {
-        topper()
+        Topper()
         Spacer(modifier = Modifier.size(32.dp))
         Row(modifier = Modifier.fillMaxWidth().align(Alignment.End)) {
             Column {
-                title("Nutritions")
-                nutritionItem()
-                nutritionItem()
-                nutritionItem()
+                Title("Nutritions")
+                NutritionItem()
+                NutritionItem()
+                NutritionItem()
             }
             Image(
-                asset = imageResource(id = R.drawable.dish),
+                bitmap = imageResource(id = R.drawable.common_full_open_on_phone),
                 modifier = Modifier.preferredSize(200.dp)
-                    .drawShadow(8.dp, shape = CircleShape)
+                    .shadow(8.dp, shape = CircleShape)
                     .clip(RoundedCornerShape(20.dp))
             )
         }
-        title("Ingredients")
+        Title("Ingredients")
         Text(
             style = MaterialTheme.typography.body2,
-            text =
-            """
+            text = """
             |2 cups of shit
             |2 cups of shit
             |2 cups of shit
-            |2 cups of shit
-        """.trimMargin()
+            |2 cups of shit""".trimMargin()
         )
-        title("Receipe Preparation")
+        Title("Receipe Preparation")
         Text(
             style = MaterialTheme.typography.body2,
-            text =
-            """
+            text = """
             |2 cups of shit
             |2 cups of shit
             |2 cups of shit
-            |2 cups of shit
-        """.trimMargin()
+            |2 cups of shit""".trimMargin()
         )
     }
 }
 
 @Composable
-fun topper() {
+fun Topper() {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(text = "Watercress Salad", style = MaterialTheme.typography.h1)
         Text(
@@ -109,17 +99,17 @@ fun topper() {
 }
 
 @Composable
-fun nutritionItem() {
+fun NutritionItem() {
     Row(
         modifier = Modifier
             .padding(vertical = 8.dp)
-            .drawShadow(15.dp, shape = CircleShape)
+            .shadow(15.dp, shape = CircleShape)
             .background(MaterialTheme.colors.background)
             .padding(vertical = 8.dp, horizontal = 12.dp)
     ) {
         Column(
             modifier = Modifier
-                .drawShadow(2.dp, shape = CircleShape)
+                .shadow(2.dp, shape = CircleShape)
                 .background(Color.White)
                 .align(Alignment.CenterVertically)
         ) {
@@ -141,7 +131,7 @@ fun nutritionItem() {
 }
 
 @Composable
-fun title(title: String) {
+fun Title(title: String) {
     Text(title, style = MaterialTheme.typography.h2, modifier = Modifier.padding(vertical = 8.dp))
 }
 
