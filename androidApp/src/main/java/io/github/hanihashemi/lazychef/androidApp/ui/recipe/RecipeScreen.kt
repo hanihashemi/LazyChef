@@ -69,24 +69,20 @@ fun BodyContent() {
         Title("Ingredients")
         Text(
             style = MaterialTheme.typography.body2,
-            text =
-                """
+            text = """
             |2 cups of shit
             |2 cups of shit
             |2 cups of shit
-            |2 cups of shit
-        """.trimMargin()
+            |2 cups of shit""".trimMargin()
         )
         Title("Receipe Preparation")
         Text(
             style = MaterialTheme.typography.body2,
-            text =
-                """
+            text = """
             |2 cups of shit
             |2 cups of shit
             |2 cups of shit
-            |2 cups of shit
-        """.trimMargin()
+            |2 cups of shit""".trimMargin()
         )
     }
 }
